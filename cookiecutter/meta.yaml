@@ -10,7 +10,7 @@ build:
   # preserve_egg_dir: True
   entry_points:
 
-    - cookiecutter = cookiecutter.main:main
+    - cookiecutter = cookiecutter.cli:main
 
   number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
 
@@ -25,13 +25,16 @@ requirements:
     - binaryornot >=0.3.0
     - jinja2 >=2.7
     - pyyaml >=3.10
+    - mock
+    - click
 
   run:
     - python
     - binaryornot >=0.3.0
     - jinja2 >=2.7
     - pyyaml >=3.10
-
+    - mock
+    - click
 
 
 test:
